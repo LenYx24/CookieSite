@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     img: "https://thumbs.dreamstime.com/b/green-food-supplements-juice-wheat-grass-powder-barley-grass-blades-background-detox-healthy-living-33412001.jpg",
   },
@@ -18,3 +18,5 @@ export default [
     img: "https://thumbs.dreamstime.com/b/healthy-diet-breakfast-oatmeal-cereal-fruit-foods-full-energy-athletes-concept-diet-food-preparing-homemade-60029080.jpg",
   },
 ];
+
+export default data;

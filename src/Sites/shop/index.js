@@ -1,11 +1,8 @@
-import react, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CookieContainer from "../../global_components/CookieContainer";
 
 const Shop = () => {
   const [text, setText] = useState("");
-  useEffect(() => {
-    console.log(text);
-  }, [text]);
   return (
     <div className="mx-5">
       <input

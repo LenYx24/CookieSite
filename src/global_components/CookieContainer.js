@@ -10,7 +10,7 @@ const breakpointColumnsObj = {
   500: 1,
 };
 
-const CookieContainer = ({ sortBy, show = 3, className, search }) => {
+const CookieContainer = ({ sortBy, show = 3, className = "", search = "" }) => {
   let cookies = [...data];
   if (sortBy !== null) {
     cookies.sort((a, b) => (a[sortBy] > b[sortBy] ? 1 : -1));
@@ -56,6 +56,11 @@ const CookieContainer = ({ sortBy, show = 3, className, search }) => {
               <h5 className="italic underline underline-offset-4">
                 {item.price}$
               </h5>
+            </div>
+            <div>
+              <h2 className="text-lg font-light px-2 text-center">
+                Amount sold: {item.amountSold}
+              </h2>
             </div>
           </div>
         );
