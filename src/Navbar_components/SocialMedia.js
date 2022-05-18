@@ -24,11 +24,20 @@ const SocialMedia = ({ menuVisible }) => {
       />
       <IconElement name="youtube" icon={<AiFillYoutube size={iconSize} />} />
       <div className="px-4">
-        <MdShoppingBag
-          className="cursor-pointer"
-          size={30}
-          onClick={() => setShowCart(!showCart)}
-        />
+        <div className="relative">
+          <MdShoppingBag
+            className="cursor-pointer"
+            size={40}
+            onClick={() => setShowCart(!showCart)}
+          />
+          <div
+            className={`absolute top-0 right-0 rounded-full w-4 h-5 text-sm text-white bg-red-800 text-center z-50 ${
+              cart.length === 0 ? "hidden" : "block"
+            }`}
+          >
+            {cart.length > 9 ? "9+" : cart.length}
+          </div>
+        </div>
         {showCart && (
           <div className="absolute left-0 top-12 lg:right-16 lg:left-auto lg:top-20 bg-slate-50 w-64 border min-h-32 text-right rounded-xl shadow-md">
             <div className="flex justify-between py-4 bg-slate-500 text-white w-full px-3 rounded-xl">

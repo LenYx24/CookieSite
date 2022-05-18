@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NavLinks = ({ menuVisible }) => {
-  const NavLinkNames = ["home", "shop", "about me", "contact"];
+  const NavLinkNames = ["", "shop", "about me", "contact"];
   return (
     <div
       className={`flex lg:flex-row flex-col text-md lg:text-sm items-center lg:inline-flex order-2 lg:order-1 ${

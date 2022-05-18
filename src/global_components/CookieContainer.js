@@ -46,9 +46,9 @@ const CookieContainer = ({ sortBy, show = 3, className = "", search = "" }) => {
                 className="border rounded-3xl m-auto w-[90%] hover:opacity-90 hover:cursor-pointer"
               />
               <IoIosAddCircleOutline
-                className="absolute top-2 right-8 cursor-pointer hover:text-cyan-700"
+                className="absolute top-2 right-8 cursor-pointer hover:text-cyan-700 hover:bg-white hover:rounded-full"
                 onClick={() => setCart([...cart, item.id])}
-                size={20}
+                size={40}
               />
             </div>
             <div className="flex justify-between mx-7">

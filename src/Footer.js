@@ -34,7 +34,7 @@ const Footer = () => {
         <Column
           head="get it fast"
           data={[
-            "email address",
+            "email address: example@gmail.com",
             <button className="uppercase border bg-pink-300 mt-2 px-16 py-2 hover:bg-pink-400">
               subscribe now
             </button>,
