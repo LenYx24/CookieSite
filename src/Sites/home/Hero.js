@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <main className="w-full bg-no-repeat lg:p-32 text-center lg:text-left bg-cover text-white font-mono uppercase background">
-      <div className="md:text-7xl text-6xl md:mb-10 pt-20 pb-10 lg:pb-0">
+      <div className="md:text-7xl text-6xl md:mb-10 pt-20 pb-10 lg:pb-0 select-none">
         <div className="font-['oswald']">
           100% <span className="font-bold">natural.</span>
         </div>
