@@ -1,32 +1,22 @@
-import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar.js";
-import Footer from "./Footer.js";
-
-import Home from "./Sites/home";
-import Shop from "./Sites/shop";
-import Aboutme from "./Sites/aboutme";
-import Contact from "./Sites/contact";
-import NoPage from "./Error/NoSite.js";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Main from "./Main";
 
 export const MainContext = React.createContext();
 
 function App() {
+  let [loading, setLoading] = useState(true);
   const [cart, setCart] = useState([]);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
   return (
     <MainContext.Provider value={{ cart, setCart }}>
       <BrowserRouter>
-        <div className="w-full lg:container m-auto">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/aboutme" element={<Aboutme />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} />
-          </Routes>
-          <Footer />
-        </div>
+        <Main loading={loading} />
       </BrowserRouter>
     </MainContext.Provider>
   );

@@ -22,7 +22,7 @@ const Footer = () => {
         <Column
           head="opening hours"
           data={[
-            "Mon -Fri 7am - 11pm",
+            "Mon: Fri 7am - 11pm",
             "Saturday: 8am - 8pm",
             "Sunday: 10am - 7pm",
           ]}

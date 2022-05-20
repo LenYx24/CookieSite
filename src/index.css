@@ -6,3 +6,12 @@
 .background{
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url("images/background.jpg");;
 }
+.loadingAnim{
+background: rgb(68, 32, 52);
+  background: linear-gradient(
+    90deg,
+    rgba(68, 32, 52, 1) 0%,
+    rgba(23, 23, 51, 1) 41%,
+    rgba(20, 67, 77, 1) 100%
+  );
+}
