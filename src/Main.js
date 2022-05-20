@@ -17,7 +17,7 @@ const Main = ({ loading }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0, width: 0, height: 0 }}
+          exit={{ opacity: 0, width: 0 }}
           key="modal"
         >
           <div className="mx-auto flex w-screen h-screen loadingAnim">

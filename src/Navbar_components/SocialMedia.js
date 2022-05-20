@@ -26,7 +26,7 @@ const SocialMedia = ({ menuVisible }) => {
       <div className="px-4">
         <div className="relative">
           <MdShoppingBag
-            className="cursor-pointer"
+            className="cursor-pointer hover:text-cyan-700"
             size={40}
             onClick={() => setShowCart(!showCart)}
           />
@@ -39,9 +39,9 @@ const SocialMedia = ({ menuVisible }) => {
           </div>
         </div>
         {showCart && (
-          <div className="absolute left-0 top-12 lg:right-16 lg:left-auto lg:top-20 bg-slate-50 w-64 border min-h-32 text-right rounded-xl shadow-md">
+          <div className="absolute left-0 top-12 lg:right-16 lg:left-auto lg:top-20 bg-slate-50 w-72 border min-h-32 text-right rounded-xl shadow-md">
             <div className="flex justify-between py-4 bg-slate-500 text-white w-full px-3 rounded-xl">
-              <p className="mr-4">Your products ({cart.length} items)</p>
+              <p className="">Your products ({cart.length} items)</p>
               <button className="lg:px-4 px-3 py-1 bg-white text-black text-md uppercase rounded hover:bg-cyan-700 hover:text-white font-['roboto'] font-bold transition-all">
                 checkout
               </button>
