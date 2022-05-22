@@ -3,6 +3,7 @@ import data from "../cookiesData.js";
 import Masonry from "react-masonry-css";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { MainContext } from "../App.js";
+import { v4 as uuid } from "uuid";
 
 const breakpointColumnsObj = {
   default: 3,
@@ -22,6 +23,11 @@ const CookieContainer = ({ sortBy, show = 3, className = "", search = "" }) => {
     cookies = cookies.slice(0, show);
   }
   const { cart, setCart } = useContext(MainContext);
+  const addToCart = (item) => {
+    const small_id = uuid().slice(0, 8);
+    const newCart = { ...item, uid: small_id };
+    setCart([...cart, newCart]);
+  };
   return (
     <Masonry
       breakpointCols={breakpointColumnsObj}
@@ -46,8 +52,8 @@ const CookieContainer = ({ sortBy, show = 3, className = "", search = "" }) => {
                 className="border rounded-3xl m-auto w-[90%] hover:opacity-90 hover:cursor-pointer"
               />
               <IoIosAddCircleOutline
-                className="absolute top-2 right-8 cursor-pointer hover:text-cyan-700 hover:bg-white hover:rounded-full"
-                onClick={() => setCart([...cart, item.id])}
+                className="absolute top-2 right-8 cursor-pointer hover:text-cyan-700 hover:bg-white hover:rounded-full select-none"
+                onClick={() => addToCart(item)}
                 size={40}
               />
             </div>
